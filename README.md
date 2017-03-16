@@ -7,14 +7,14 @@ Arduino devices can recieve MIDI messages as an input via their serial recieve p
 ### Installation
 + **All of this is done after the intial wifi setup on the Arduino Yun. A good guide for that can be found** [here](https://www.twilio.com/blog/2015/02/arduino-wifi-getting-started-arduino-yun.html)
 + **First pip must be installed on the Arduino Yun's console**
-	`$ opkg update`
-	`$ opkg install distribute`
-	`$ opkg install python-openssl`
-	`$ easy_install pip`
+	+ `$ opkg update`
+	+ `$ opkg install distribute`
+	+ `$ opkg install python-openssl`
+	+ `$ easy_install pip`
 + **Installs all the required python libraries**
-	`$ pip install -r requirements.txt`
+	+ `$ pip install -r requirements.txt`
 + **The Yun comes with a 'bridge' by default that must be disconnected to allow PySerial to communicate to the Arduino board, the following disables the bridge**
-	`$ python DisableYunBridge.py`
+	+ `$ python DisableYunBridge.py`
 
 ### Usage
 + Navigate to file directory on the Arduino Yun's console
