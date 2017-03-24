@@ -1,7 +1,10 @@
-import OSC
 import mido
+import OSC
 import serial
+import socket
 
+port = 7777
+confirm = 0
 
 notenumber = 0
 ser = serial.Serial('/dev/ttyATH0')
@@ -44,8 +47,16 @@ def controllerChange(addr, tags, data, client_address):
 	ser.write(smsg)
 
 if __name__ == "__main__":
-	s = OSC.OSCServer(('192.168.0.108', 4000))
-	s.addMsgHandler('/nOn', noteOn)
-	s.addMsgHandler('/nOff', noteOff)
-	s.addMsgHandler('/cchange', controllerChange)
-	s.serve_forever()
+	while (confirm == 0):
+		try:
+			s = OSC.OSCServer(('192.168.0.108', port))
+			s.addMsgHandler('/', noteOn)    # call handler() for OSC messages received with the /startup address
+			s.addMsgHandler('/nOff', noteOff)
+			s.addMsgHandler('/cchange', controllerChange)
+			s.serve_forever()
+			print("Port number set to" + str(port))
+			confirm = 1
+		except socket.error, exc:
+			print("Caught exception socket.error: %s" % exc)
+			port = port + 1
+			print("Port number now set to " + str(port))
