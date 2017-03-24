@@ -4,7 +4,7 @@
 ### Description
 Arduino devices can recieve MIDI messages as an input via their serial recieve pin. The Arduino Yun is an arduino microcontroller board with an additional Atheros AR9331 processor onboard that supports a Linux distribution based on OpenWrt that allows for WiFi communication.
 
-### Installation
+### Installation and Set-Up
 + **All of this is done after the intial wifi setup on the Arduino Yun. A good guide for that can be found** [here](https://www.twilio.com/blog/2015/02/arduino-wifi-getting-started-arduino-yun.html)
 + **First pip must be installed on the Arduino Yun's console**
 	+ `$ opkg update`
@@ -19,8 +19,7 @@ Arduino devices can recieve MIDI messages as an input via their serial recieve p
 ### Usage
 + Navigate to file directory on the Arduino Yun's console
 + Start python OSC server on the Yun with `$ python osc2midi.py`
-+ Start processing script
-+ You're good to go!
+
 
 ### To-Do
 #### Processing
@@ -28,5 +27,5 @@ Arduino devices can recieve MIDI messages as an input via their serial recieve p
 	+ It should list MIDI devices and allow you to change the MIDIBus objects to use the possible MIDI devices
 	+ Also should allow for user to change the port number
 #### Python
-+ Add error exceptions when current port is in use and cycle to next port
++ ~~Add error exceptions when current port is in use and cycle to next port~~
 	+ Find someway to communicate this change to Processing (or allow user to input this change)
