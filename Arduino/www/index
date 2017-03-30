@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+  <div data-role="header">
+    <h1>Arduino Control Panel</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <form method="post" action="/action_page_post.php">
+      <div data-role="rangeslider">
+        <label for="price-min">Servo 1</label>
+        <input type="range" name="price-min" id="price-min" value="0" min="0" max="100">
+        <label for="price-max">Price:</label>
+        <input type="range" name="price-max" id="price-max" value="100" min="0" max="100">
+      </div>
+        <input type="submit" data-inline="true" value="Submit">
+      </form>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <form method="post" action="/action_page_post.php">
+      <div data-role="rangeslider">
+        <label for="price-min">Servo 2</label>
+        <input type="range" name="price-min" id="price-min" value="0" min="0" max="100">
+        <label for="price-max">Price:</label>
+        <input type="range" name="price-max" id="price-max" value="100" min="0" max="100">
+      </div>
+        <input type="submit" data-inline="true" value="Submit">
+      </form>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <form method="post" action="/action_page_post.php">
+      <div data-role="rangeslider">
+        <label for="price-min">Servo 3</label>
+        <input type="range" name="price-min" id="price-min" value="0" min="0" max="100">
+        <label for="price-max">Price:</label>
+        <input type="range" name="price-max" id="price-max" value="100" min="0" max="100">
+      </div>
+        <input type="submit" data-inline="true" value="Submit">
+      </form>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <form method="post" action="/action_page_post.php">
+      <div data-role="rangeslider">
+        <label for="price-min">Servo 4</label>
+        <input type="range" name="price-min" id="price-min" value="0" min="0" max="100">
+        <label for="price-max">Price:</label>
+        <input type="range" name="price-max" id="price-max" value="100" min="0" max="100">
+      </div>
+        <input type="submit" data-inline="true" value="Submit">
+      </form>
+  </div>
+</div> 
+
+</body>
+</html>
