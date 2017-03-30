@@ -40,7 +40,7 @@ Arduino devices can recieve MIDI messages as an input via their serial recieve p
 
 
 ### To-Do
-#### Processing (has been replaced with Audacity)
+#### Processing (has been replaced with Ableton Live)
 + ~~Create GUI~~
 	+ It should list MIDI devices and allow you to change the MIDIBus objects to use the possible MIDI devices
 	+ Also should allow for user to change the port number
